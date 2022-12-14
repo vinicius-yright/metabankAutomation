@@ -2,11 +2,11 @@
 #encoding: utf-8
 #author: Vinicius Souza
 
-@Pessoa
+@MetaBank @Pessoa
 Feature: Validar funcionalidade de cadastro de pessoas via backend
 
     Background:
-      * def urlLocal = 'http://localhost:8080'
+      * def urlLocal = 'http://89.116.225.253:8080'
 
   @TC-01
   Scenario: Registrar uma nova pessoa e validar seu cadastro

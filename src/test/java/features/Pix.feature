@@ -2,11 +2,11 @@
 #encoding: utf-8
 #author: Vinicius Souza
 
-@Pix
+@MetaBank @Pix
 Feature: Validar funcionalidade de chaves pix via backend
 
     Background:
-      * def urlLocal = 'http://localhost:8080'
+      * def urlLocal = 'http://89.116.225.253:8080'
       * def body = read('classpath:features/payloads/payload_addchavepix.json')
       * def randomNum =
       """

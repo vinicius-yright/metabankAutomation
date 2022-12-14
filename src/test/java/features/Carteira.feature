@@ -2,11 +2,11 @@
 #encoding: utf-8
 #author: Vinicius Souza
 
-@Carteira
+@MetaBank @Carteira
 Feature: Validar funcionalidade de criação de carteiras via backend
 
     Background:
-      * def urlLocal = 'http://localhost:8080'
+      * def urlLocal = 'http://89.116.225.253:8080'
       * def body = read('classpath:features/payloads/payload_carteira.json')
 
   @TC-02
@@ -35,14 +35,14 @@ Feature: Validar funcionalidade de criação de carteiras via backend
   Scenario: Deletar carteira + conta e confirmar remoção via listagem
     * def novaCarteira = callonce read('classpath:features/Carteira.feature@TC-02')
     Given url urlLocal
-    And path '/carteira/' + novaCarteira.novaPessoa.response.id
+    And path '/carteira/' + novaCarteira.idCarteira
     When method delete
     Then status 200
     #confirmando a remoção
     Given url urlLocal
     And path '/carteira'
     When method get
-    Then match response[*].id !contains novaCarteira.novaPessoa.response.id
+    Then match response[*].id !contains novaCarteira.idCarteira
 
 
 

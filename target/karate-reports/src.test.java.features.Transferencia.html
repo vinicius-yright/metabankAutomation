@@ -37,21 +37,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">1</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
     </div>
   </div>
   <div id="nav-type">
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2022-12-08 04:56:27 PM</div>
+    <div>2022-12-14 09:28:28 AM</div>
   </div>        
 </div>
 
         <div class="nav-container">
-          <div class="nav-item passed">
-            <a href="#[1:12]"><span>[1:12]</span> <span>Realizar transferencia</span></a>
+          <div class="nav-item failed">
+            <a href="#[2:22]"><span>[2:22]</span> <span>Tentativa de realizar transferencia sem enviar id da carteiraPagadora</span></a>
           </div>
         </div>
       </div>
@@ -65,29 +65,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:12]">
+          <div class="scenario-heading" id="[2:22]">
             <div class="heading-container">
               <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">Transferencia</a><a class="badge badge-primary" href="karate-tags.html">TC-06</a>
+                <a class="badge badge-primary" href="karate-tags.html">Transferencia</a><a class="badge badge-primary" href="karate-tags.html">MetaBank</a><a class="badge badge-primary" href="karate-tags.html">TC-07</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:12]</span>
-                <span class="scenario-name">Realizar transferencia</span>
+                Scenario: <span>[2:22]</span>
+                <span class="scenario-name">Tentativa de realizar transferencia sem enviar id da carteiraPagadora</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>800</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1198</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:12]bg">
+            <div class="step-container" id="[2:22]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:12]bg"><div>
+          <div data-parent="[2:22]bg"><div>
   
 
   
@@ -97,7 +97,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">9</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def urlLocal = &#39;http://localhost:8080&#39;</span>
+        <span>*</span>&nbsp;<span>def urlLocal = &#39;http://89.116.225.253:8080&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -109,7 +109,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.9">16:56:27.017 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.9">09:28:26.977 karate.env system property was: null 
 </div>   
 
   
@@ -122,14 +122,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>url urlLocal</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -150,14 +150,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>path &#39;/transferencia/&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -178,14 +178,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.15">
-      <div class="step-ref passed">15</div>
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param idCarteiraPagadora = &#39;2&#39;</span>
+        <span>And</span>&nbsp;<span>param idCarteiraPagadora = &#39;0&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -206,14 +206,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.16">
-      <div class="step-ref passed">16</div>
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>param chavePix = &#39;email@email.com&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -234,8 +234,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.17">
-      <div class="step-ref passed">17</div>
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>param valor = &#39;29&#39;</span>
@@ -262,14 +262,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.18">
-      <div class="step-ref passed">18</div>
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">790</div>
+    <div class="time-cell passed">1186</div>
   </div>
 
    
@@ -278,22 +278,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.18">16:56:27.723 request:
-1 &gt; POST http://localhost:8080/transferencia?chavePix=email%40email.com&amp;valor=29&amp;idCarteiraPagadora=2
-1 &gt; Host: localhost:8080
+  <div class="preformatted" data-parent="0.28">09:28:27.618 request:
+1 &gt; POST http://89.116.225.253:8080/transferencia?chavePix=email%40email.com&amp;valor=29&amp;idCarteiraPagadora=0
+1 &gt; Host: 89.116.225.253:8080
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-16:56:27.829 response time in milliseconds: 103
-1 &lt; 200
+09:28:28.180 response time in milliseconds: 559
+1 &lt; 500
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Thu, 08 Dec 2022 19:56:27 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-{&quot;id&quot;:2,&quot;idCarteiraPagadora&quot;:{&quot;id&quot;:2,&quot;idPessoa&quot;:{&quot;id&quot;:2,&quot;cpf&quot;:&quot;1234&quot;,&quot;nome&quot;:&quot;Micael Trivelato&quot;,&quot;email&quot;:&quot;micael.hyppolito@deal.com.br&quot;,&quot;telefone&quot;:&quot;11999999999&quot;,&quot;status&quot;:&quot;Ativo&quot;,&quot;login&quot;:&quot;micael3600&quot;},&quot;saldo&quot;:9971.0,&quot;chavePix&quot;:[{&quot;id&quot;:3,&quot;tipoChave&quot;:&quot;CPF&quot;,&quot;descricao&quot;:&quot;4044040430&quot;}]},&quot;idCarteiraRecebedora&quot;:{&quot;id&quot;:1,&quot;idPessoa&quot;:{&quot;id&quot;:1,&quot;cpf&quot;:&quot;1234&quot;,&quot;nome&quot;:&quot;Micael Trivelato&quot;,&quot;email&quot;:&quot;micael.hyppolito@deal.com.br&quot;,&quot;telefone&quot;:&quot;11999999999&quot;,&quot;status&quot;:&quot;Ativo&quot;,&quot;login&quot;:&quot;micael3600&quot;},&quot;saldo&quot;:5071.98,&quot;chavePix&quot;:[{&quot;id&quot;:2,&quot;tipoChave&quot;:&quot;EMAIL&quot;,&quot;descricao&quot;:&quot;email@email.com&quot;},{&quot;id&quot;:1,&quot;tipoChave&quot;:&quot;CELULAR&quot;,&quot;descricao&quot;:&quot;11999999999&quot;}]},&quot;valor&quot;:29.0,&quot;data&quot;:&quot;2022-12-08T16:56:27.7940991&quot;}
+1 &lt; Date: Wed, 14 Dec 2022 12:28:30 GMT
+1 &lt; Connection: close
+{&quot;timestamp&quot;:&quot;2022-12-14T12:28:30.727+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/transferencia&quot;}
 
 </div>   
 
@@ -307,14 +306,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref passed">19</div>
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>status 200</span>
+        <span>And</span>&nbsp;<span>print response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">5</div>
   </div>
 
    
@@ -323,7 +322,47 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.29">09:28:28.212 [print] {
+  &quot;timestamp&quot;: &quot;2022-12-14T12:28:30.727+00:00&quot;,
+  &quot;status&quot;: 500,
+  &quot;error&quot;: &quot;Internal Server Error&quot;,
+  &quot;path&quot;: &quot;/transferencia&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref failed">30</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.30">09:28:28.213 src/test/java/features/Transferencia.feature:30
+And status 200
+status code was: 500, expected: 200, response time in milliseconds: 559, url: http://89.116.225.253:8080/transferencia?chavePix=email%40email.com&amp;valor=29&amp;idCarteiraPagadora=0, response: 
+{&quot;timestamp&quot;:&quot;2022-12-14T12:28:30.727+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/transferencia&quot;}
+src/test/java/features/Transferencia.feature:30
+</div>   
 
   
 
