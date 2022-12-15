@@ -47,4 +47,3 @@ Feature: Validar funcionalidade de criação de carteiras via backend
     Then match response.situacao contains 'INATIVO'
 
 
-

@@ -37,6 +37,7 @@ Feature: Validar funcionalidade de chaves pix via backend
     Given url urlLocal
     And path '/chaves-pix'
     When method get
+    And print response
     Then match response[*].id contains idChaveCriada
     #removendo a chave criada para não manter duplicadas
     Given url urlLocal
