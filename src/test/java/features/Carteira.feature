@@ -32,17 +32,19 @@ Feature: Validar funcionalidade de criação de carteiras via backend
     Then match response[*].id contains idCarteira
 
   @TC-03
-  Scenario: Deletar carteira + conta e confirmar remoção via listagem
+  Scenario: Desativar carteira + conta e confirmar desativação via listagem
     * def novaCarteira = callonce read('classpath:features/Carteira.feature@TC-02')
     Given url urlLocal
     And path '/carteira/' + novaCarteira.idCarteira
-    When method delete
+    When method put
     Then status 200
-    #confirmando a remoção
+    #confirmando a inativação
     Given url urlLocal
-    And path '/carteira'
+    And path '/carteira/' + novaCarteira.idCarteira
     When method get
-    Then match response[*].id !contains novaCarteira.idCarteira
+    And print response
+    Then match response.id == novaCarteira.idCarteira
+    Then match response.situacao contains 'INATIVO'
 
 
 

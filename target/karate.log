@@ -54364,3 +54364,2377 @@ status code was: 500, expected: 200, response time in milliseconds: 559, url: ht
 {"timestamp":"2022-12-14T12:28:30.727+00:00","status":500,"error":"Internal Server Error","path":"/transferencia"}
 src/test/java/features/Transferencia.feature:30
 09:28:29.036 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/Transferencia.feature
+10:15:55.397 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:15:55.454 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1671110155453
+10:15:56.791 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:15:56.928 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:15:56.929 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Pessoas.feature - call by tag at line 12: TC-01
+10:15:58.579 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/pessoa
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 162
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao","senha":"testes123"}
+
+10:15:59.460 [main] DEBUG com.intuit.karate - response time in milliseconds: 878
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:16:01 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:15:59.464 [main] INFO  com.intuit.karate - [print] {
+  "id": 3,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:15:59.474 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/pessoa/3
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:15:59.749 [main] DEBUG com.intuit.karate - response time in milliseconds: 274
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:16:01 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:15:59.751 [main] INFO  com.intuit.karate - [print] {
+  "id": 3,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:15:59.771 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:15:59.774 [main] INFO  com.intuit.karate - [print] 3 
+10:15:59.777 [main] DEBUG com.intuit.karate - request:
+3 > POST http://89.116.225.253:8080/carteira
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 37
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+{"idPessoa":{"id":3},"saldo":10000.0}
+
+10:16:00.393 [main] DEBUG com.intuit.karate - response time in milliseconds: 616
+3 < 201
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Thu, 15 Dec 2022 13:16:01 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"id":3,"idPessoa":{"id":3,"cpf":null,"nome":null,"email":null,"telefone":null,"status":null,"login":null},"saldo":10000.0,"chavePix":null,"situacao":"ATIVO"}
+
+10:16:00.395 [main] INFO  com.intuit.karate - [print] {
+  "id": 3,
+  "idPessoa": {
+    "id": 3,
+    "cpf": null,
+    "nome": null,
+    "email": null,
+    "telefone": null,
+    "status": null,
+    "login": null
+  },
+  "saldo": 10000.0,
+  "chavePix": null,
+  "situacao": "ATIVO"
+}
+ 
+10:16:00.397 [main] INFO  com.intuit.karate - [print] 3 
+10:16:00.399 [main] DEBUG com.intuit.karate - request:
+4 > GET http://89.116.225.253:8080/carteira
+4 > Host: 89.116.225.253:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+4 > Accept-Encoding: gzip,deflate
+
+
+10:16:00.905 [main] DEBUG com.intuit.karate - response time in milliseconds: 506
+4 < 200
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Thu, 15 Dec 2022 13:16:02 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5042.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":10000.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},{"id":3,"idPessoa":{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"}]
+
+10:16:00.907 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 1,
+    "idPessoa": {
+      "id": 1,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 5042.98,
+    "chavePix": [
+      {
+        "id": 2,
+        "tipoChave": "EMAIL",
+        "descricao": "email@email.com"
+      },
+      {
+        "id": 1,
+        "tipoChave": "CELULAR",
+        "descricao": "11999999999"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 2,
+    "idPessoa": {
+      "id": 2,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+      {
+        "id": 3,
+        "tipoChave": "CPF",
+        "descricao": "4044040430"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 3,
+    "idPessoa": {
+      "id": 3,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  }
+]
+ 
+10:16:00.917 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:16:00.924 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Carteira.feature@TC-02')
+10:16:00.924 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Carteira.feature - call by tag at line 13: TC-02
+10:16:00.934 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:16:00.934 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Pessoas.feature - call by tag at line 12: TC-01
+10:16:00.944 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/pessoa
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 162
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao","senha":"testes123"}
+
+10:16:01.209 [main] DEBUG com.intuit.karate - response time in milliseconds: 265
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:16:02 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:16:01.210 [main] INFO  com.intuit.karate - [print] {
+  "id": 4,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:16:01.214 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/pessoa/4
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:16:01.473 [main] DEBUG com.intuit.karate - response time in milliseconds: 259
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:16:02 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:16:01.485 [main] INFO  com.intuit.karate - [print] {
+  "id": 4,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:16:01.489 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:16:01.491 [main] INFO  com.intuit.karate - [print] 4 
+10:16:01.493 [main] DEBUG com.intuit.karate - request:
+3 > POST http://89.116.225.253:8080/carteira
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 37
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+{"idPessoa":{"id":4},"saldo":10000.0}
+
+10:16:01.979 [main] DEBUG com.intuit.karate - response time in milliseconds: 486
+3 < 201
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Thu, 15 Dec 2022 13:16:03 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"id":4,"idPessoa":{"id":4,"cpf":null,"nome":null,"email":null,"telefone":null,"status":null,"login":null},"saldo":10000.0,"chavePix":null,"situacao":"ATIVO"}
+
+10:16:01.981 [main] INFO  com.intuit.karate - [print] {
+  "id": 4,
+  "idPessoa": {
+    "id": 4,
+    "cpf": null,
+    "nome": null,
+    "email": null,
+    "telefone": null,
+    "status": null,
+    "login": null
+  },
+  "saldo": 10000.0,
+  "chavePix": null,
+  "situacao": "ATIVO"
+}
+ 
+10:16:01.983 [main] INFO  com.intuit.karate - [print] 4 
+10:16:01.984 [main] DEBUG com.intuit.karate - request:
+4 > GET http://89.116.225.253:8080/carteira
+4 > Host: 89.116.225.253:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+4 > Accept-Encoding: gzip,deflate
+
+
+10:16:02.249 [main] DEBUG com.intuit.karate - response time in milliseconds: 265
+4 < 200
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Thu, 15 Dec 2022 13:16:03 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5042.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":10000.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},{"id":3,"idPessoa":{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":4,"idPessoa":{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"}]
+
+10:16:02.251 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 1,
+    "idPessoa": {
+      "id": 1,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 5042.98,
+    "chavePix": [
+      {
+        "id": 2,
+        "tipoChave": "EMAIL",
+        "descricao": "email@email.com"
+      },
+      {
+        "id": 1,
+        "tipoChave": "CELULAR",
+        "descricao": "11999999999"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 2,
+    "idPessoa": {
+      "id": 2,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+      {
+        "id": 3,
+        "tipoChave": "CPF",
+        "descricao": "4044040430"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 3,
+    "idPessoa": {
+      "id": 3,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 4,
+    "idPessoa": {
+      "id": 4,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  }
+]
+ 
+10:16:02.253 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Carteira.feature@TC-02')
+10:16:02.256 [main] DEBUG com.intuit.karate - request:
+5 > DELETE http://89.116.225.253:8080/carteira/4
+5 > Host: 89.116.225.253:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+5 > Accept-Encoding: gzip,deflate
+
+
+10:16:02.519 [main] DEBUG com.intuit.karate - response time in milliseconds: 263
+5 < 405
+5 < Allow: PUT, GET
+5 < Content-Type: application/json
+5 < Transfer-Encoding: chunked
+5 < Date: Thu, 15 Dec 2022 13:16:03 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+{"timestamp":"2022-12-15T13:16:04.219+00:00","status":405,"error":"Method Not Allowed","path":"/carteira/4"}
+
+10:16:02.521 [main] ERROR com.intuit.karate - classpath:features/Carteira.feature:40
+Then status 200
+status code was: 405, expected: 200, response time in milliseconds: 263, url: http://89.116.225.253:8080/carteira/4, response: 
+{"timestamp":"2022-12-15T13:16:04.219+00:00","status":405,"error":"Method Not Allowed","path":"/carteira/4"}
+classpath:features/Carteira.feature:40
+10:16:03.868 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 4 (0 remaining) classpath:features/Carteira.feature
+10:16:03.874 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:16:03.877 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/pessoa
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 162
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao","senha":"testes123"}
+
+10:16:04.140 [main] DEBUG com.intuit.karate - response time in milliseconds: 263
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:16:05 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":5,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:16:04.142 [main] INFO  com.intuit.karate - [print] {
+  "id": 5,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:16:04.145 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/pessoa/5
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:16:04.642 [main] DEBUG com.intuit.karate - response time in milliseconds: 497
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:16:05 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"id":5,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:16:04.643 [main] INFO  com.intuit.karate - [print] {
+  "id": 5,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:16:04.731 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 4 (0 remaining) classpath:features/Pessoas.feature
+10:16:04.740 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:16:04.755 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Carteira.feature@TC-02')
+10:16:04.756 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Carteira.feature - call by tag at line 13: TC-02
+10:16:04.771 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:16:04.772 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Pessoas.feature - call by tag at line 12: TC-01
+10:16:04.778 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/pessoa
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 162
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao","senha":"testes123"}
+
+10:16:05.058 [main] DEBUG com.intuit.karate - response time in milliseconds: 280
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:16:05 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":6,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:16:05.060 [main] INFO  com.intuit.karate - [print] {
+  "id": 6,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:16:05.063 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/pessoa/6
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:16:05.563 [main] DEBUG com.intuit.karate - response time in milliseconds: 499
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:16:07 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"id":6,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:16:05.563 [main] INFO  com.intuit.karate - [print] {
+  "id": 6,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:16:05.566 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:16:05.567 [main] INFO  com.intuit.karate - [print] 6 
+10:16:05.569 [main] DEBUG com.intuit.karate - request:
+3 > POST http://89.116.225.253:8080/carteira
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 37
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+{"idPessoa":{"id":6},"saldo":10000.0}
+
+10:16:06.076 [main] DEBUG com.intuit.karate - response time in milliseconds: 507
+3 < 201
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Thu, 15 Dec 2022 13:16:07 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"id":5,"idPessoa":{"id":6,"cpf":null,"nome":null,"email":null,"telefone":null,"status":null,"login":null},"saldo":10000.0,"chavePix":null,"situacao":"ATIVO"}
+
+10:16:06.077 [main] INFO  com.intuit.karate - [print] {
+  "id": 5,
+  "idPessoa": {
+    "id": 6,
+    "cpf": null,
+    "nome": null,
+    "email": null,
+    "telefone": null,
+    "status": null,
+    "login": null
+  },
+  "saldo": 10000.0,
+  "chavePix": null,
+  "situacao": "ATIVO"
+}
+ 
+10:16:06.078 [main] INFO  com.intuit.karate - [print] 5 
+10:16:06.079 [main] DEBUG com.intuit.karate - request:
+4 > GET http://89.116.225.253:8080/carteira
+4 > Host: 89.116.225.253:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+4 > Accept-Encoding: gzip,deflate
+
+
+10:16:06.631 [main] DEBUG com.intuit.karate - response time in milliseconds: 552
+4 < 200
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Thu, 15 Dec 2022 13:16:08 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5042.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":10000.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},{"id":3,"idPessoa":{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":4,"idPessoa":{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":5,"idPessoa":{"id":6,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"}]
+
+10:16:06.632 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 1,
+    "idPessoa": {
+      "id": 1,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 5042.98,
+    "chavePix": [
+      {
+        "id": 2,
+        "tipoChave": "EMAIL",
+        "descricao": "email@email.com"
+      },
+      {
+        "id": 1,
+        "tipoChave": "CELULAR",
+        "descricao": "11999999999"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 2,
+    "idPessoa": {
+      "id": 2,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+      {
+        "id": 3,
+        "tipoChave": "CPF",
+        "descricao": "4044040430"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 3,
+    "idPessoa": {
+      "id": 3,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 4,
+    "idPessoa": {
+      "id": 4,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 5,
+    "idPessoa": {
+      "id": 6,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  }
+]
+ 
+10:16:06.635 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Carteira.feature@TC-02')
+10:16:06.640 [main] DEBUG com.intuit.karate - request:
+5 > POST http://89.116.225.253:8080/chaves-pix/5
+5 > Content-Type: application/json; charset=UTF-8
+5 > Content-Length: 59
+5 > Host: 89.116.225.253:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+5 > Accept-Encoding: gzip,deflate
+{"tipoChave":"EMAIL","descricao":"emailautomacaogmail.com"}
+
+10:16:07.022 [main] DEBUG com.intuit.karate - response time in milliseconds: 382
+5 < 201
+5 < Content-Type: application/json
+5 < Transfer-Encoding: chunked
+5 < Date: Thu, 15 Dec 2022 13:16:08 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+{"id":6,"tipoChave":"EMAIL","descricao":"emailautomacaogmail.com"}
+
+10:16:07.026 [main] INFO  com.intuit.karate - [print] 6 
+10:16:07.028 [main] DEBUG com.intuit.karate - request:
+6 > GET http://89.116.225.253:8080/chaves-pix
+6 > Host: 89.116.225.253:8080
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+6 > Accept-Encoding: gzip,deflate
+
+
+10:16:07.536 [main] DEBUG com.intuit.karate - response time in milliseconds: 508
+6 < 200
+6 < Content-Type: application/json
+6 < Transfer-Encoding: chunked
+6 < Date: Thu, 15 Dec 2022 13:16:08 GMT
+6 < Keep-Alive: timeout=60
+6 < Connection: keep-alive
+[{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"},{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":3,"tipoChave":"CPF","descricao":"4044040430"},{"id":4,"tipoChave":"ALEATORIA","descricao":"j48yf61n3i7kj8g1nuk5y478hgu1k4n5hu3gm1k45hgm1kl4h53"},{"id":5,"tipoChave":"CPF","descricao":"2022020230"},{"id":6,"tipoChave":"EMAIL","descricao":"emailautomacaogmail.com"}]
+
+10:16:07.542 [main] DEBUG com.intuit.karate - request:
+7 > DELETE http://89.116.225.253:8080/carteira/5/emailautomacaogmail.com
+7 > Host: 89.116.225.253:8080
+7 > Connection: Keep-Alive
+7 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+7 > Accept-Encoding: gzip,deflate
+
+
+10:16:08.139 [main] DEBUG com.intuit.karate - response time in milliseconds: 597
+7 < 200
+7 < Content-Disposition: inline;filename=f.txt
+7 < Content-Type: text/plain;charset=UTF-8
+7 < Content-Length: 31
+7 < Date: Thu, 15 Dec 2022 13:16:09 GMT
+7 < Keep-Alive: timeout=60
+7 < Connection: keep-alive
+Chave PIX deletada com sucesso!
+
+10:16:08.144 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:16:08.155 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/chaves-pix/5
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"tipoChave":"CELULAR","descricao":"11940028922"}
+
+10:16:08.438 [main] DEBUG com.intuit.karate - response time in milliseconds: 282
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:16:09 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":7,"tipoChave":"CELULAR","descricao":"11940028922"}
+
+10:16:08.440 [main] INFO  com.intuit.karate - [print] 7 
+10:16:08.441 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/chaves-pix
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:16:08.711 [main] DEBUG com.intuit.karate - response time in milliseconds: 270
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:16:09 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+[{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"},{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":3,"tipoChave":"CPF","descricao":"4044040430"},{"id":4,"tipoChave":"ALEATORIA","descricao":"j48yf61n3i7kj8g1nuk5y478hgu1k4n5hu3gm1k45hgm1kl4h53"},{"id":5,"tipoChave":"CPF","descricao":"2022020230"},{"id":7,"tipoChave":"CELULAR","descricao":"11940028922"}]
+
+10:16:08.714 [main] DEBUG com.intuit.karate - request:
+3 > DELETE http://89.116.225.253:8080/carteira/5/11940028922
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+
+
+10:16:09.227 [main] DEBUG com.intuit.karate - response time in milliseconds: 512
+3 < 200
+3 < Content-Type: text/plain;charset=UTF-8
+3 < Content-Length: 31
+3 < Date: Thu, 15 Dec 2022 13:16:10 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+Chave PIX deletada com sucesso!
+
+10:16:09.231 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:16:09.242 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/chaves-pix/5
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 45
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"tipoChave":"CPF","descricao":"00000000000"}
+
+10:16:09.747 [main] DEBUG com.intuit.karate - response time in milliseconds: 504
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:16:10 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":8,"tipoChave":"CPF","descricao":"00000000000"}
+
+10:16:09.748 [main] INFO  com.intuit.karate - [print] 8 
+10:16:09.750 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/chaves-pix
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:16:10.244 [main] DEBUG com.intuit.karate - response time in milliseconds: 494
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:16:11 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+[{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"},{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":3,"tipoChave":"CPF","descricao":"4044040430"},{"id":4,"tipoChave":"ALEATORIA","descricao":"j48yf61n3i7kj8g1nuk5y478hgu1k4n5hu3gm1k45hgm1kl4h53"},{"id":5,"tipoChave":"CPF","descricao":"2022020230"},{"id":8,"tipoChave":"CPF","descricao":"00000000000"}]
+
+10:16:10.247 [main] DEBUG com.intuit.karate - request:
+3 > DELETE http://89.116.225.253:8080/carteira/5/00000000000
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+
+
+10:16:10.764 [main] DEBUG com.intuit.karate - response time in milliseconds: 516
+3 < 200
+3 < Content-Type: text/plain;charset=UTF-8
+3 < Content-Length: 31
+3 < Date: Thu, 15 Dec 2022 13:16:11 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+Chave PIX deletada com sucesso!
+
+10:16:10.769 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:16:10.777 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/chaves-pix/5
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"tipoChave":"ALEATORIA","descricao":"ALEATORIA"}
+
+10:16:11.049 [main] DEBUG com.intuit.karate - response time in milliseconds: 271
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:16:11 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":9,"tipoChave":"ALEATORIA","descricao":"ALEATORIA"}
+
+10:16:11.050 [main] INFO  com.intuit.karate - [print] 9 
+10:16:11.051 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/chaves-pix
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:16:11.554 [main] DEBUG com.intuit.karate - response time in milliseconds: 502
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:16:13 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+[{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"},{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":3,"tipoChave":"CPF","descricao":"4044040430"},{"id":4,"tipoChave":"ALEATORIA","descricao":"j48yf61n3i7kj8g1nuk5y478hgu1k4n5hu3gm1k45hgm1kl4h53"},{"id":5,"tipoChave":"CPF","descricao":"2022020230"},{"id":9,"tipoChave":"ALEATORIA","descricao":"ALEATORIA"}]
+
+10:16:11.557 [main] DEBUG com.intuit.karate - request:
+3 > DELETE http://89.116.225.253:8080/carteira/5/ALEATORIA
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+
+
+10:16:12.057 [main] DEBUG com.intuit.karate - response time in milliseconds: 500
+3 < 200
+3 < Content-Type: text/plain;charset=UTF-8
+3 < Content-Length: 31
+3 < Date: Thu, 15 Dec 2022 13:16:13 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+Chave PIX deletada com sucesso!
+
+10:16:12.615 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 4 (0 remaining) classpath:features/Pix.feature
+10:16:12.622 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:16:12.628 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/transferencia?chavePix=email%40email.com&valor=29&idCarteiraPagadora=2
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+
+
+10:16:13.337 [main] DEBUG com.intuit.karate - response time in milliseconds: 708
+1 < 200
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:16:14 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":2,"idCarteiraPagadora":{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":9971.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},"idCarteiraRecebedora":{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5071.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},"valor":29.0,"data":"2022-12-15T13:16:14.867024929"}
+
+10:16:13.338 [main] INFO  com.intuit.karate - [print] {
+  "id": 2,
+  "idCarteiraPagadora": {
+    "id": 2,
+    "idPessoa": {
+      "id": 2,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 9971.0,
+    "chavePix": [
+      {
+        "id": 3,
+        "tipoChave": "CPF",
+        "descricao": "4044040430"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  "idCarteiraRecebedora": {
+    "id": 1,
+    "idPessoa": {
+      "id": 1,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 5071.98,
+    "chavePix": [
+      {
+        "id": 2,
+        "tipoChave": "EMAIL",
+        "descricao": "email@email.com"
+      },
+      {
+        "id": 1,
+        "tipoChave": "CELULAR",
+        "descricao": "11999999999"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  "valor": 29.0,
+  "data": "2022-12-15T13:16:14.867024929"
+}
+ 
+10:16:13.374 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 4 of 4 (0 remaining) classpath:features/Transferencia.feature
+10:16:13.375 [main] DEBUG com.intuit.karate.Suite - waiting for 4 features to complete
+10:19:14.172 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:19:14.179 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1671110354177
+10:19:14.214 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 35 - ^Deletar carteira \+ conta e confirmar remoção via listagem$
+10:19:15.826 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:19:15.962 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Carteira.feature@TC-02')
+10:19:15.963 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Carteira.feature - call by tag at line 13: TC-02
+10:19:15.978 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:19:15.978 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Pessoas.feature - call by tag at line 12: TC-01
+10:19:16.672 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/pessoa
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 162
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao","senha":"testes123"}
+
+10:19:17.193 [main] DEBUG com.intuit.karate - response time in milliseconds: 518
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:19:18 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":7,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:19:17.195 [main] INFO  com.intuit.karate - [print] {
+  "id": 7,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:19:17.206 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/pessoa/7
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:19:17.686 [main] DEBUG com.intuit.karate - response time in milliseconds: 479
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:19:18 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"id":7,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:19:17.687 [main] INFO  com.intuit.karate - [print] {
+  "id": 7,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:19:17.700 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:19:17.701 [main] INFO  com.intuit.karate - [print] 7 
+10:19:17.704 [main] DEBUG com.intuit.karate - request:
+3 > POST http://89.116.225.253:8080/carteira
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 37
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+{"idPessoa":{"id":7},"saldo":10000.0}
+
+10:19:17.969 [main] DEBUG com.intuit.karate - response time in milliseconds: 265
+3 < 201
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Thu, 15 Dec 2022 13:19:18 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"id":6,"idPessoa":{"id":7,"cpf":null,"nome":null,"email":null,"telefone":null,"status":null,"login":null},"saldo":10000.0,"chavePix":null,"situacao":"ATIVO"}
+
+10:19:17.970 [main] INFO  com.intuit.karate - [print] {
+  "id": 6,
+  "idPessoa": {
+    "id": 7,
+    "cpf": null,
+    "nome": null,
+    "email": null,
+    "telefone": null,
+    "status": null,
+    "login": null
+  },
+  "saldo": 10000.0,
+  "chavePix": null,
+  "situacao": "ATIVO"
+}
+ 
+10:19:17.972 [main] INFO  com.intuit.karate - [print] 6 
+10:19:17.974 [main] DEBUG com.intuit.karate - request:
+4 > GET http://89.116.225.253:8080/carteira
+4 > Host: 89.116.225.253:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+4 > Accept-Encoding: gzip,deflate
+
+
+10:19:18.503 [main] DEBUG com.intuit.karate - response time in milliseconds: 529
+4 < 200
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Thu, 15 Dec 2022 13:19:20 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5071.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":9971.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},{"id":3,"idPessoa":{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":4,"idPessoa":{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":5,"idPessoa":{"id":6,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":6,"idPessoa":{"id":7,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"}]
+
+10:19:18.506 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 1,
+    "idPessoa": {
+      "id": 1,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 5071.98,
+    "chavePix": [
+      {
+        "id": 2,
+        "tipoChave": "EMAIL",
+        "descricao": "email@email.com"
+      },
+      {
+        "id": 1,
+        "tipoChave": "CELULAR",
+        "descricao": "11999999999"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 2,
+    "idPessoa": {
+      "id": 2,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 9971.0,
+    "chavePix": [
+      {
+        "id": 3,
+        "tipoChave": "CPF",
+        "descricao": "4044040430"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 3,
+    "idPessoa": {
+      "id": 3,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 4,
+    "idPessoa": {
+      "id": 4,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 5,
+    "idPessoa": {
+      "id": 6,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 6,
+    "idPessoa": {
+      "id": 7,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  }
+]
+ 
+10:19:18.509 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Carteira.feature@TC-02')
+10:19:18.512 [main] DEBUG com.intuit.karate - request:
+5 > PUT http://89.116.225.253:8080/carteira/6
+5 > Host: 89.116.225.253:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+5 > Accept-Encoding: gzip,deflate
+
+
+10:19:19.017 [main] DEBUG com.intuit.karate - response time in milliseconds: 505
+5 < 200
+5 < Content-Type: text/plain;charset=UTF-8
+5 < Content-Length: 28
+5 < Date: Thu, 15 Dec 2022 13:19:20 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+Conta inativada com Sucesso!
+
+10:19:19.019 [main] DEBUG com.intuit.karate - request:
+6 > GET http://89.116.225.253:8080/carteira
+6 > Host: 89.116.225.253:8080
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+6 > Accept-Encoding: gzip,deflate
+
+
+10:19:19.308 [main] DEBUG com.intuit.karate - response time in milliseconds: 289
+6 < 200
+6 < Content-Type: application/json
+6 < Transfer-Encoding: chunked
+6 < Date: Thu, 15 Dec 2022 13:19:20 GMT
+6 < Keep-Alive: timeout=60
+6 < Connection: keep-alive
+[{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5071.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":9971.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},{"id":3,"idPessoa":{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":4,"idPessoa":{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":5,"idPessoa":{"id":6,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":6,"idPessoa":{"id":7,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"}]
+
+10:19:19.311 [main] ERROR com.intuit.karate - src/test/java/features/Carteira.feature:45
+Then match response[*].id !contains novaCarteira.idCarteira
+match failed: NOT_CONTAINS
+  $ | actual contains expected (LIST:NUMBER)
+  [1,2,3,4,5,6]
+  6
+
+    $[4] | not equal (NUMBER:NUMBER)
+    5
+    6
+
+    $[3] | not equal (NUMBER:NUMBER)
+    4
+    6
+
+    $[2] | not equal (NUMBER:NUMBER)
+    3
+    6
+
+    $[1] | not equal (NUMBER:NUMBER)
+    2
+    6
+
+    $[0] | not equal (NUMBER:NUMBER)
+    1
+    6
+
+src/test/java/features/Carteira.feature:45
+10:19:20.359 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/Carteira.feature
+10:19:48.803 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:19:48.811 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1671110388809
+10:19:48.848 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 35 - ^Deletar carteira \+ conta e confirmar remoção via listagem$
+10:19:50.178 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:19:50.319 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Carteira.feature@TC-02')
+10:19:50.321 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Carteira.feature - call by tag at line 13: TC-02
+10:19:50.337 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:19:50.338 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Pessoas.feature - call by tag at line 12: TC-01
+10:19:51.034 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/pessoa
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 162
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao","senha":"testes123"}
+
+10:19:51.330 [main] DEBUG com.intuit.karate - response time in milliseconds: 294
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:19:53 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":8,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:19:51.333 [main] INFO  com.intuit.karate - [print] {
+  "id": 8,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:19:51.346 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/pessoa/8
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:19:51.847 [main] DEBUG com.intuit.karate - response time in milliseconds: 501
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:19:53 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"id":8,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:19:51.849 [main] INFO  com.intuit.karate - [print] {
+  "id": 8,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:19:51.869 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:19:51.871 [main] INFO  com.intuit.karate - [print] 8 
+10:19:51.874 [main] DEBUG com.intuit.karate - request:
+3 > POST http://89.116.225.253:8080/carteira
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 37
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+{"idPessoa":{"id":8},"saldo":10000.0}
+
+10:19:52.164 [main] DEBUG com.intuit.karate - response time in milliseconds: 290
+3 < 201
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Thu, 15 Dec 2022 13:19:53 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"id":7,"idPessoa":{"id":8,"cpf":null,"nome":null,"email":null,"telefone":null,"status":null,"login":null},"saldo":10000.0,"chavePix":null,"situacao":"ATIVO"}
+
+10:19:52.166 [main] INFO  com.intuit.karate - [print] {
+  "id": 7,
+  "idPessoa": {
+    "id": 8,
+    "cpf": null,
+    "nome": null,
+    "email": null,
+    "telefone": null,
+    "status": null,
+    "login": null
+  },
+  "saldo": 10000.0,
+  "chavePix": null,
+  "situacao": "ATIVO"
+}
+ 
+10:19:52.168 [main] INFO  com.intuit.karate - [print] 7 
+10:19:52.170 [main] DEBUG com.intuit.karate - request:
+4 > GET http://89.116.225.253:8080/carteira
+4 > Host: 89.116.225.253:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+4 > Accept-Encoding: gzip,deflate
+
+
+10:19:52.693 [main] DEBUG com.intuit.karate - response time in milliseconds: 523
+4 < 200
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Thu, 15 Dec 2022 13:19:54 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5071.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":9971.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},{"id":3,"idPessoa":{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":4,"idPessoa":{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":5,"idPessoa":{"id":6,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":6,"idPessoa":{"id":7,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"},{"id":7,"idPessoa":{"id":8,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"}]
+
+10:19:52.695 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 1,
+    "idPessoa": {
+      "id": 1,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 5071.98,
+    "chavePix": [
+      {
+        "id": 2,
+        "tipoChave": "EMAIL",
+        "descricao": "email@email.com"
+      },
+      {
+        "id": 1,
+        "tipoChave": "CELULAR",
+        "descricao": "11999999999"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 2,
+    "idPessoa": {
+      "id": 2,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 9971.0,
+    "chavePix": [
+      {
+        "id": 3,
+        "tipoChave": "CPF",
+        "descricao": "4044040430"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 3,
+    "idPessoa": {
+      "id": 3,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 4,
+    "idPessoa": {
+      "id": 4,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 5,
+    "idPessoa": {
+      "id": 6,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 6,
+    "idPessoa": {
+      "id": 7,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "INATIVO"
+  },
+  {
+    "id": 7,
+    "idPessoa": {
+      "id": 8,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  }
+]
+ 
+10:19:52.698 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Carteira.feature@TC-02')
+10:19:52.702 [main] DEBUG com.intuit.karate - request:
+5 > PUT http://89.116.225.253:8080/carteira/7
+5 > Host: 89.116.225.253:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+5 > Accept-Encoding: gzip,deflate
+
+
+10:19:53.210 [main] DEBUG com.intuit.karate - response time in milliseconds: 508
+5 < 200
+5 < Content-Type: text/plain;charset=UTF-8
+5 < Content-Length: 28
+5 < Date: Thu, 15 Dec 2022 13:19:54 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+Conta inativada com Sucesso!
+
+10:19:53.213 [main] DEBUG com.intuit.karate - request:
+6 > GET http://89.116.225.253:8080/carteira
+6 > Host: 89.116.225.253:8080
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+6 > Accept-Encoding: gzip,deflate
+
+
+10:19:53.721 [main] DEBUG com.intuit.karate - response time in milliseconds: 507
+6 < 200
+6 < Content-Type: application/json
+6 < Transfer-Encoding: chunked
+6 < Date: Thu, 15 Dec 2022 13:19:55 GMT
+6 < Keep-Alive: timeout=60
+6 < Connection: keep-alive
+[{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5071.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":9971.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},{"id":3,"idPessoa":{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":4,"idPessoa":{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":5,"idPessoa":{"id":6,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":6,"idPessoa":{"id":7,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"},{"id":7,"idPessoa":{"id":8,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"}]
+
+10:19:53.723 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 1,
+    "idPessoa": {
+      "id": 1,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 5071.98,
+    "chavePix": [
+      {
+        "id": 2,
+        "tipoChave": "EMAIL",
+        "descricao": "email@email.com"
+      },
+      {
+        "id": 1,
+        "tipoChave": "CELULAR",
+        "descricao": "11999999999"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 2,
+    "idPessoa": {
+      "id": 2,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 9971.0,
+    "chavePix": [
+      {
+        "id": 3,
+        "tipoChave": "CPF",
+        "descricao": "4044040430"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 3,
+    "idPessoa": {
+      "id": 3,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 4,
+    "idPessoa": {
+      "id": 4,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 5,
+    "idPessoa": {
+      "id": 6,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 6,
+    "idPessoa": {
+      "id": 7,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "INATIVO"
+  },
+  {
+    "id": 7,
+    "idPessoa": {
+      "id": 8,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "INATIVO"
+  }
+]
+ 
+10:19:53.727 [main] ERROR com.intuit.karate - src/test/java/features/Carteira.feature:46
+Then match response[*].id !contains novaCarteira.idCarteira
+match failed: NOT_CONTAINS
+  $ | actual contains expected (LIST:NUMBER)
+  [1,2,3,4,5,6,7]
+  7
+
+    $[5] | not equal (NUMBER:NUMBER)
+    6
+    7
+
+    $[4] | not equal (NUMBER:NUMBER)
+    5
+    7
+
+    $[3] | not equal (NUMBER:NUMBER)
+    4
+    7
+
+    $[2] | not equal (NUMBER:NUMBER)
+    3
+    7
+
+    $[1] | not equal (NUMBER:NUMBER)
+    2
+    7
+
+    $[0] | not equal (NUMBER:NUMBER)
+    1
+    7
+
+src/test/java/features/Carteira.feature:46
+10:19:55.358 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/Carteira.feature
+10:22:27.819 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:22:27.826 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1671110547825
+10:22:27.874 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 35 - ^Deletar carteira \+ conta e confirmar remoção via listagem$
+10:22:29.074 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:22:29.218 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Carteira.feature@TC-02')
+10:22:29.219 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Carteira.feature - call by tag at line 13: TC-02
+10:22:29.236 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:22:29.237 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Pessoas.feature - call by tag at line 12: TC-01
+10:22:30.004 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/pessoa
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 162
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao","senha":"testes123"}
+
+10:22:30.318 [main] DEBUG com.intuit.karate - response time in milliseconds: 312
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:22:32 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":9,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:22:30.320 [main] INFO  com.intuit.karate - [print] {
+  "id": 9,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:22:30.333 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/pessoa/9
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:22:30.829 [main] DEBUG com.intuit.karate - response time in milliseconds: 496
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:22:32 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"id":9,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:22:30.830 [main] INFO  com.intuit.karate - [print] {
+  "id": 9,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:22:30.847 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:22:30.849 [main] INFO  com.intuit.karate - [print] 9 
+10:22:30.852 [main] DEBUG com.intuit.karate - request:
+3 > POST http://89.116.225.253:8080/carteira
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 37
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+{"idPessoa":{"id":9},"saldo":10000.0}
+
+10:22:31.112 [main] DEBUG com.intuit.karate - response time in milliseconds: 260
+3 < 201
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Thu, 15 Dec 2022 13:22:32 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"id":8,"idPessoa":{"id":9,"cpf":null,"nome":null,"email":null,"telefone":null,"status":null,"login":null},"saldo":10000.0,"chavePix":null,"situacao":"ATIVO"}
+
+10:22:31.113 [main] INFO  com.intuit.karate - [print] {
+  "id": 8,
+  "idPessoa": {
+    "id": 9,
+    "cpf": null,
+    "nome": null,
+    "email": null,
+    "telefone": null,
+    "status": null,
+    "login": null
+  },
+  "saldo": 10000.0,
+  "chavePix": null,
+  "situacao": "ATIVO"
+}
+ 
+10:22:31.115 [main] INFO  com.intuit.karate - [print] 8 
+10:22:31.117 [main] DEBUG com.intuit.karate - request:
+4 > GET http://89.116.225.253:8080/carteira
+4 > Host: 89.116.225.253:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+4 > Accept-Encoding: gzip,deflate
+
+
+10:22:31.629 [main] DEBUG com.intuit.karate - response time in milliseconds: 512
+4 < 200
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Thu, 15 Dec 2022 13:22:33 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5071.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":9971.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},{"id":3,"idPessoa":{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":4,"idPessoa":{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":5,"idPessoa":{"id":6,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":6,"idPessoa":{"id":7,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"},{"id":7,"idPessoa":{"id":8,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"},{"id":8,"idPessoa":{"id":9,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"}]
+
+10:22:31.631 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 1,
+    "idPessoa": {
+      "id": 1,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 5071.98,
+    "chavePix": [
+      {
+        "id": 2,
+        "tipoChave": "EMAIL",
+        "descricao": "email@email.com"
+      },
+      {
+        "id": 1,
+        "tipoChave": "CELULAR",
+        "descricao": "11999999999"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 2,
+    "idPessoa": {
+      "id": 2,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 9971.0,
+    "chavePix": [
+      {
+        "id": 3,
+        "tipoChave": "CPF",
+        "descricao": "4044040430"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 3,
+    "idPessoa": {
+      "id": 3,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 4,
+    "idPessoa": {
+      "id": 4,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 5,
+    "idPessoa": {
+      "id": 6,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 6,
+    "idPessoa": {
+      "id": 7,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "INATIVO"
+  },
+  {
+    "id": 7,
+    "idPessoa": {
+      "id": 8,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "INATIVO"
+  },
+  {
+    "id": 8,
+    "idPessoa": {
+      "id": 9,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  }
+]
+ 
+10:22:31.634 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Carteira.feature@TC-02')
+10:22:31.636 [main] DEBUG com.intuit.karate - request:
+5 > PUT http://89.116.225.253:8080/carteira/8
+5 > Host: 89.116.225.253:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+5 > Accept-Encoding: gzip,deflate
+
+
+10:22:31.900 [main] DEBUG com.intuit.karate - response time in milliseconds: 264
+5 < 200
+5 < Content-Type: text/plain;charset=UTF-8
+5 < Content-Length: 28
+5 < Date: Thu, 15 Dec 2022 13:22:33 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+Conta inativada com Sucesso!
+
+10:22:31.902 [main] DEBUG com.intuit.karate - request:
+6 > GET http://89.116.225.253:8080/carteira/8
+6 > Host: 89.116.225.253:8080
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+6 > Accept-Encoding: gzip,deflate
+
+
+10:22:32.397 [main] DEBUG com.intuit.karate - response time in milliseconds: 495
+6 < 200
+6 < Content-Type: application/json
+6 < Transfer-Encoding: chunked
+6 < Date: Thu, 15 Dec 2022 13:22:33 GMT
+6 < Keep-Alive: timeout=60
+6 < Connection: keep-alive
+{"id":8,"idPessoa":{"id":9,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"}
+
+10:22:32.398 [main] INFO  com.intuit.karate - [print] {
+  "id": 8,
+  "idPessoa": {
+    "id": 9,
+    "cpf": "043.700.270-55",
+    "nome": "RoboAutomacao",
+    "email": "automacao@gmail.com.br",
+    "telefone": "11940028922",
+    "status": "Teste",
+    "login": "Automacao"
+  },
+  "saldo": 10000.0,
+  "chavePix": [
+  ],
+  "situacao": "INATIVO"
+}
+ 
+10:22:32.399 [main] ERROR com.intuit.karate - src/test/java/features/Carteira.feature:46
+Then match response.id contains novaCarteira.idCarteira
+unexpected type (match contains): NUMBER
+src/test/java/features/Carteira.feature:46
+10:22:33.761 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/features/Carteira.feature
+10:23:23.445 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:23:23.452 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1671110603451
+10:23:36.402 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:23:36.407 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1671110616406
+10:23:36.441 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 35 - ^Desativar carteira \+ conta e confirmar desativação via listagem$
+10:23:37.548 [main] INFO  com.intuit.karate - karate.env system property was: null 
+10:23:37.664 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Carteira.feature@TC-02')
+10:23:37.666 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Carteira.feature - call by tag at line 13: TC-02
+10:23:37.684 [main] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:23:37.684 [main] INFO  c.intuit.karate.core.FeatureRuntime - classpath:features/Pessoas.feature - call by tag at line 12: TC-01
+10:23:38.333 [main] DEBUG com.intuit.karate - request:
+1 > POST http://89.116.225.253:8080/pessoa
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 162
+1 > Host: 89.116.225.253:8080
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 > Accept-Encoding: gzip,deflate
+{"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao","senha":"testes123"}
+
+10:23:38.860 [main] DEBUG com.intuit.karate - response time in milliseconds: 524
+1 < 201
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Date: Thu, 15 Dec 2022 13:23:40 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+{"id":10,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:23:38.862 [main] INFO  com.intuit.karate - [print] {
+  "id": 10,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:23:38.872 [main] DEBUG com.intuit.karate - request:
+2 > GET http://89.116.225.253:8080/pessoa/10
+2 > Host: 89.116.225.253:8080
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+2 > Accept-Encoding: gzip,deflate
+
+
+10:23:39.362 [main] DEBUG com.intuit.karate - response time in milliseconds: 490
+2 < 200
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Date: Thu, 15 Dec 2022 13:23:40 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+{"id":10,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","status":"Teste","login":"Automacao","telefone":"11940028922"}
+
+10:23:39.363 [main] INFO  com.intuit.karate - [print] {
+  "id": 10,
+  "cpf": "043.700.270-55",
+  "nome": "RoboAutomacao",
+  "email": "automacao@gmail.com.br",
+  "status": "Teste",
+  "login": "Automacao",
+  "telefone": "11940028922"
+}
+ 
+10:23:39.377 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Pessoas.feature@TC-01')
+10:23:39.378 [main] INFO  com.intuit.karate - [print] 10 
+10:23:39.381 [main] DEBUG com.intuit.karate - request:
+3 > POST http://89.116.225.253:8080/carteira
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 38
+3 > Host: 89.116.225.253:8080
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+3 > Accept-Encoding: gzip,deflate
+{"idPessoa":{"id":10},"saldo":10000.0}
+
+10:23:39.658 [main] DEBUG com.intuit.karate - response time in milliseconds: 276
+3 < 201
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Date: Thu, 15 Dec 2022 13:23:40 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+{"id":9,"idPessoa":{"id":10,"cpf":null,"nome":null,"email":null,"telefone":null,"status":null,"login":null},"saldo":10000.0,"chavePix":null,"situacao":"ATIVO"}
+
+10:23:39.659 [main] INFO  com.intuit.karate - [print] {
+  "id": 9,
+  "idPessoa": {
+    "id": 10,
+    "cpf": null,
+    "nome": null,
+    "email": null,
+    "telefone": null,
+    "status": null,
+    "login": null
+  },
+  "saldo": 10000.0,
+  "chavePix": null,
+  "situacao": "ATIVO"
+}
+ 
+10:23:39.661 [main] INFO  com.intuit.karate - [print] 9 
+10:23:39.663 [main] DEBUG com.intuit.karate - request:
+4 > GET http://89.116.225.253:8080/carteira
+4 > Host: 89.116.225.253:8080
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+4 > Accept-Encoding: gzip,deflate
+
+
+10:23:40.182 [main] DEBUG com.intuit.karate - response time in milliseconds: 517
+4 < 200
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Date: Thu, 15 Dec 2022 13:23:41 GMT
+4 < Keep-Alive: timeout=60
+4 < Connection: keep-alive
+[{"id":1,"idPessoa":{"id":1,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":5071.98,"chavePix":[{"id":2,"tipoChave":"EMAIL","descricao":"email@email.com"},{"id":1,"tipoChave":"CELULAR","descricao":"11999999999"}],"situacao":"ATIVO"},{"id":2,"idPessoa":{"id":2,"cpf":"1234","nome":"Micael Trivelato","email":"micael.hyppolito@deal.com.br","telefone":"11999999999","status":"Ativo","login":"micael3600"},"saldo":9971.0,"chavePix":[{"id":3,"tipoChave":"CPF","descricao":"4044040430"}],"situacao":"ATIVO"},{"id":3,"idPessoa":{"id":3,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":4,"idPessoa":{"id":4,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":5,"idPessoa":{"id":6,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"},{"id":6,"idPessoa":{"id":7,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"},{"id":7,"idPessoa":{"id":8,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"},{"id":8,"idPessoa":{"id":9,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"},{"id":9,"idPessoa":{"id":10,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"ATIVO"}]
+
+10:23:40.184 [main] INFO  com.intuit.karate - [print] [
+  {
+    "id": 1,
+    "idPessoa": {
+      "id": 1,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 5071.98,
+    "chavePix": [
+      {
+        "id": 2,
+        "tipoChave": "EMAIL",
+        "descricao": "email@email.com"
+      },
+      {
+        "id": 1,
+        "tipoChave": "CELULAR",
+        "descricao": "11999999999"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 2,
+    "idPessoa": {
+      "id": 2,
+      "cpf": "1234",
+      "nome": "Micael Trivelato",
+      "email": "micael.hyppolito@deal.com.br",
+      "telefone": "11999999999",
+      "status": "Ativo",
+      "login": "micael3600"
+    },
+    "saldo": 9971.0,
+    "chavePix": [
+      {
+        "id": 3,
+        "tipoChave": "CPF",
+        "descricao": "4044040430"
+      }
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 3,
+    "idPessoa": {
+      "id": 3,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 4,
+    "idPessoa": {
+      "id": 4,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 5,
+    "idPessoa": {
+      "id": 6,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  },
+  {
+    "id": 6,
+    "idPessoa": {
+      "id": 7,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "INATIVO"
+  },
+  {
+    "id": 7,
+    "idPessoa": {
+      "id": 8,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "INATIVO"
+  },
+  {
+    "id": 8,
+    "idPessoa": {
+      "id": 9,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "INATIVO"
+  },
+  {
+    "id": 9,
+    "idPessoa": {
+      "id": 10,
+      "cpf": "043.700.270-55",
+      "nome": "RoboAutomacao",
+      "email": "automacao@gmail.com.br",
+      "telefone": "11940028922",
+      "status": "Teste",
+      "login": "Automacao"
+    },
+    "saldo": 10000.0,
+    "chavePix": [
+    ],
+    "situacao": "ATIVO"
+  }
+]
+ 
+10:23:40.187 [main] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:features/Carteira.feature@TC-02')
+10:23:40.189 [main] DEBUG com.intuit.karate - request:
+5 > PUT http://89.116.225.253:8080/carteira/9
+5 > Host: 89.116.225.253:8080
+5 > Connection: Keep-Alive
+5 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+5 > Accept-Encoding: gzip,deflate
+
+
+10:23:40.684 [main] DEBUG com.intuit.karate - response time in milliseconds: 495
+5 < 200
+5 < Content-Type: text/plain;charset=UTF-8
+5 < Content-Length: 28
+5 < Date: Thu, 15 Dec 2022 13:23:41 GMT
+5 < Keep-Alive: timeout=60
+5 < Connection: keep-alive
+Conta inativada com Sucesso!
+
+10:23:40.686 [main] DEBUG com.intuit.karate - request:
+6 > GET http://89.116.225.253:8080/carteira/9
+6 > Host: 89.116.225.253:8080
+6 > Connection: Keep-Alive
+6 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+6 > Accept-Encoding: gzip,deflate
+
+
+10:23:40.950 [main] DEBUG com.intuit.karate - response time in milliseconds: 264
+6 < 200
+6 < Content-Type: application/json
+6 < Transfer-Encoding: chunked
+6 < Date: Thu, 15 Dec 2022 13:23:41 GMT
+6 < Keep-Alive: timeout=60
+6 < Connection: keep-alive
+{"id":9,"idPessoa":{"id":10,"cpf":"043.700.270-55","nome":"RoboAutomacao","email":"automacao@gmail.com.br","telefone":"11940028922","status":"Teste","login":"Automacao"},"saldo":10000.0,"chavePix":[],"situacao":"INATIVO"}
+
+10:23:40.951 [main] INFO  com.intuit.karate - [print] {
+  "id": 9,
+  "idPessoa": {
+    "id": 10,
+    "cpf": "043.700.270-55",
+    "nome": "RoboAutomacao",
+    "email": "automacao@gmail.com.br",
+    "telefone": "11940028922",
+    "status": "Teste",
+    "login": "Automacao"
+  },
+  "saldo": 10000.0,
+  "chavePix": [
+  ],
+  "situacao": "INATIVO"
+}
+ 
+10:23:42.102 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/features/Carteira.feature

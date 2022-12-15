@@ -16,16 +16,7 @@ Feature: Validar funcionalidade de transferencia pix via backend
     And param chavePix = 'email@email.com'
     And param valor = '29'
     And method post
-    And status 200
-
-  @TC-07
-  Scenario: Tentativa de realizar transferencia sem enviar id da carteiraPagadora
-    Given url urlLocal
-    And path '/transferencia/'
-    And param idCarteiraPagadora = '0'
-    And param chavePix = 'email@email.com'
-    And param valor = '29'
-    And method post
     And print response
     And status 200
+
 
