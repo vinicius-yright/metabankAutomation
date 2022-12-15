@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/metabank.iml" filepath="$PROJECT_DIR$/metabank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/metabank-automation.iml" filepath="$PROJECT_DIR$/metabank-automation.iml" />
     </modules>
   </component>
 </project>
