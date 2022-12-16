@@ -47,7 +47,7 @@ Feature: Validar funcionalidade de chaves pix via backend
 
     Examples:
     | tipoChave   |       chave                |
-    | 'EMAIL'     |  emailautomacaogmail.com   |
-    | 'CELULAR'   |  11940028922               |
-    | 'CPF'       |  00000000000               |
-    | 'ALEATORIA' |  ALEATORIA                 |
+    | 'EMAIL'     |  karatemetabank.com   |
+    | 'CELULAR'   |  11940018032               |
+    | 'CPF'       |  50308545940               |
+    | 'ALEATORIA' |  chavecompletamentealeatoriasemlogica           |
