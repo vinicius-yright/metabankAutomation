@@ -46,8 +46,8 @@ Feature: Validar funcionalidade de chaves pix via backend
     And status 200
 
     Examples:
-    | tipoChave   |       chave        |
-    | 'EMAIL'     |  emailautomacaogmail.com  |
+    | tipoChave   |       chave                |
+    | 'EMAIL'     |  emailautomacaogmail.com   |
     | 'CELULAR'   |  11940028922               |
     | 'CPF'       |  00000000000               |
     | 'ALEATORIA' |  ALEATORIA                 |
