@@ -1,6 +1,6 @@
 # metabankAutomation
 
-Projeto de automação de testes desenvolvido para o Deal Challenge 2022.
+Projeto de automação de testes desenvolvido para o time CTRL + ALT+ DEAL, referente o projeto MetaBank, para a competição Deal Challenge 2022.
 
 Testes automatizados usando o Karate DSL, Cucumber/Gherkin, Java e Maven. 
 
